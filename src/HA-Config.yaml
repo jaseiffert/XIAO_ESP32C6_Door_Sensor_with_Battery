@@ -1,0 +1,23 @@
+# Door Sensor Remote
+sensor:
+  - name: "Remote Door Sensor Battery"
+    unique_id: laundryroom_sensor_door_battery
+    state_topic: "laundryroom/sensor/door01"
+    value_template: "{{ value_json.batt }}"
+    unit_of_measurement: "v"
+
+  - name: "Remote Door Sensor Power"
+    unique_id: laundryroom_sensor_door_pwr
+    state_topic: "laundryroom/sensor/door01"
+    value_template: "{{ value_json.pwr }}"
+    
+  - name: "Remote Door Sensor State"
+    unique_id: laundryroom_sensor_door_state01
+    state_topic: "laundryroom/sensor/door01"
+    value_template: "{{ value_json.switchstate }}"
+    
+  - name: "Remote Door Sensor WiFi Signal"
+    unique_id: laundryroom_sensor_door_wifisig01
+    state_topic: "laundryroom/sensor/door01"
+    unit_of_measurement: "dBm"
+    value_template: "{{ value_json.wifisig }}"
